@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Secular+One&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --theme-color: #ff4841;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 40px;
+  width: 100%;
+}
+
+.nav-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  gap: 20px;
+  font-weight: 550;
+  padding-top: 20px;
+  color: var(--theme-color);
+}
+
+.nav-title img {
+  width: 100px;
+}
+
+form {
+  margin-inline: auto;
+  width: 500px;
+  display: flex;
+  position: relative;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 500px;
+  font-size: 1.6rem;
+  padding-right: 122px;
+  padding-left: 25px;
+  font-weight: 550;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  position: absolute;
+  right: 20px;
+  top: 4px;
+  height: 35px;
+  width: 100px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: .6s ease-in-out;
+}
+
+form button:hover {
+  border: 0px solid transparent;
+  background-color: rgb(223, 223, 223);
+  border-radius: 20px;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.search-tags {
+  margin-inline: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 80%;
+  padding-top: 20px;
+}
+
+.tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.right-scroll-btn,
+.left-scroll-btn {
+  padding: 5px 20px;
+  background-color: white;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.search-btn {
+  font-size: 1.8rem;
+  padding: 4px 25px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: .4s ease-in-out transform box-shadow;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  text-align: center;
+}
+
+.search-btn:hover {
+  transform: translateY(-8px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.visited {
+  background-color: black;
+  color: white;
+}
+
+.news-cards {
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.card {
+  padding: 20px;
+  transition: .4s ease-in-out box-shadow;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.card-title {
+  font-size: 3rem;
+  font-weight: 550;
+  height: 100px;
+  overflow: auto;
+}
+
+
+.card-desc {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: justify;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.know-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 10px 0px;
+}
+
+.know-more p {
+  font-size: 1.3rem;
+  width: 70%;
+}
+
+.know-more a {
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: var(--theme-color);
+  padding: 4px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 550;
+  transition: .4s ease-in-out;
+}
+
+.know-more a:hover {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.tags::-webkit-scrollbar,
+.card-title::-webkit-scrollbar,
+.card-desc::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tags::-webkit-scrollbar-thumb,
+.card-title::-webkit-scrollbar-thumb,
+.card-desc::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: var(--theme-color);
+}
+
+@media screen and (max-width:500px) and (orientation:portrait) {
+  .navbar {
+    margin-inline: auto;
+  }
+
+  form {
+    width: 80%;
+  }
+  form input{
+    min-width: 300px;
+  }
+  .news-cards {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 26px;
+  }
+
+  .left-scroll-btn,
+  .right-scroll-btn {
+    display: none;
+  }
+
+  .know-more {
+    padding-right: 0px;
+  }
+
+  .know-more a {
+    font-size: 1.4rem;
+    padding: 5px 8px;
+    border-radius: 10px;
+  }
+
+  form button {
+    right: 5px;
+  }
+}
+
+@media screen and (min-width:501px)and (max-width:800px) {
+  .news-cards {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 26px;
+  }
+}
+
+@media screen and (min-width:801px)and (max-width:1200px) {
+  .news-cards {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 26px;
+  }
+
+  .know-more {
+    padding-right: 0px;
+  }
+
+  .know-more a {
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (min-width:1201px)and (max-width:1480px) {
+  .know-more {
+    padding-right: 0px;
+  }
+
+  .know-more a {
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+}
